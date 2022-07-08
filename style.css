@@ -11,6 +11,15 @@ body{
     position:relative;
 }
 
+.background{
+    background-color: #121212;
+    background-image: url('img/Background.svg');
+    z-index: -1;
+    position:absolute;
+    flex:1;
+    height: 100%;
+    display: flex;
+}
 
 .box-container{
     display: flex;
@@ -168,6 +177,44 @@ footer{
 
 footer p{
     margin:20px;
+}
+
+/* ANIMATIONS */
+
+.left-frame{
+    animation: fadeIn 2s ease-in-out;
+    opacity: 100%;
+}
+
+#Right{
+    animation: slideLeft 3s ease-in-out;
+    -o-animation: slideLeft 3s ease-in-out;
+    opacity: 100%;
+}
+
+#Left{
+    animation: slideRight 3s ease-in-out;
+    -o-animation: slideRight 3s ease-in-out;
+    opacity: 100%;
+}
+
+@keyframes slideLeft{
+    from{
+        transform: translate(100%, 50px) rotate(5deg);
+        opacity: 0%;
+    }
+}
+@keyframes slideRight{
+    from{
+        transform: translate(-100%,-50px) rotate(-5deg);
+        opacity: 0%;
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0%;
+    }
 }
 
 /* Small Devices */
